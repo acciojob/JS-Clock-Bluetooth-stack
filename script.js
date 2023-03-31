@@ -3,15 +3,20 @@ const hr = document.querySelector(".hour-hand");
 const min = document.querySelector(".min-hand");
 const sec = document. querySelector(".second-hand");
 
-setInterval(()=>{
-	let day = new Date();
-	let hh = day.getHours() * 30;
-	let mm = day.getMinutes() * 6;
-	let ss = day.getSeconds() * 6;
-	
-	hr.style.transform = `rotateZ(${hh+(mm/2)}deg)`;
-	min.style.transform = `rotateZ(${mm}deg)`;
-	sec.style.transform = `rotateZ(${ss}deg)`;
+setInterval(() =>{
+    const day = new Date();
+    let hrr = day.getHours();
+    let mn = day.getMinutes();
+    let sc = day.getSeconds();
+    
+    let hRotate = hrr*30 + mn/2;
+    let mRotate = 6 * mn;
+    let sRotate = 6 * sc;
+
+
+    hr.style.transform = `rotateZ(${hRotate}deg)`;
+    min.style.transform = `rotateZ(${mRotate}deg)`
+    sec.style.transform = `rotateZ(${sRotate}deg)`
 });
 
 
