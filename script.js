@@ -14,8 +14,8 @@ setInterval(() =>{
     let sRotate = 6 * sc;
 
 
-    hr.style.transform = `rotateZ(${hRotate}deg)`;
-    min.style.transform = `rotateZ(${mRotate}deg)`
+    hr.style.transform = `matrix(0, 1, -1, 0, 0, 0)`;
+    min.style.transform = `matrix(0, 1, -1, 0, 0, 0)`
     sec.style.transform = `rotateZ(${sRotate}deg)`
 });
 
