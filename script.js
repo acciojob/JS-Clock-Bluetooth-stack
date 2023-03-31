@@ -10,12 +10,12 @@ setInterval(() =>{
     let sc = day.getSeconds();
     
     let hRotate = hrr*30 + mn/2;
-    let mRotate = 6 * mn;
     let sRotate = 6 * sc;
+    let mRotate = 6 * mn;
 
 
-    hr.style.transform = `matrix(0, 1, -1, 0, 0, 0)`;
-    min.style.transform = `matrix(0, 1, -1, 0, 0, 0)`
+    hr.style.transform = `rotateZ(${hRotate}deg)`;
+    min.style.transform = `rotateZ(${mRotate}deg)`
     sec.style.transform = `rotateZ(${sRotate}deg)`
 });
 
